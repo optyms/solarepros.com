@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Réservez votre démo personnalisée Solarpros - Assistant IA pour installateurs solaires. Découvrez comment tripler vos conversions en 30 minutes.">
+    <title>Réservez votre démo personnalisée - Solarpros</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicons (même que la landing page) -->
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ic29sYXJHcmFkIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0ZGODgwMCIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjRkY2QjZCIiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTYiIGZpbGw9IiM1NUMxRTciLz4KICA8Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSI4IiBmaWxsPSJ1cmwoI3NvbGFyR3JhZCkiIC8+CiAgPHBhdGggZD0iTTE2IDI0TDIwIDE2SDEyTDE2IDI0WiIgZmlsbD0id2hpdGUiIHN0cm9rZT0iIzU1QzFFNyIgc3Ryb2tlLXdpZHRoPSIxIiAvPgo8L3N2Zz4=" type="image/svg+xml">
+    
+    <style>
+        :root {
+            /* Palette de couleurs identique à la landing page */
+            --primary: #3BB3E0;
+            --primary-dark: #2A93BC;
+            --primary-light: #E8F7FC;
+            --primary-transparent: rgba(59, 179, 224, 0.08);
+            --secondary: #FF7D1F;
+            --secondary-dark: #E76800;
+            --secondary-light: #FFF1E8;
+            --secondary-transparent: rgba(255, 125, 31, 0.08);
+            --accent: #FF5E65;
+            --accent-dark: #E63E45;
+            --accent-light: #FFF0F0;
+            --accent-transparent: rgba(255, 94, 101, 0.08);
+            --dark: #233040;
+            --gray-dark: #415164;
+            --gray: #768396;
+            --gray-light: #E5EBEF;
+            --light: #F7FAFC;
+            --white: #FFFFFF;
+            --success: #38C172;
+            
+            /* Ombres */
+            --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.05);
+            --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.07);
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.12);
+            --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.15);
+            
+            /* Border radius */
+            --radius-xs: 4px;
+            --radius-sm: 6px;
+            --radius: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --radius-full: 9999px;
+            
+            /* Transitions */
+            --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+            
+            /* Layout */
+            --container-max-width: 1000px;
+            --container-padding: clamp(1rem, 5vw, 2rem);
+        }
+
+        /* Reset et base */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Nunito', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: linear-gradient(135deg, var(--light) 0%, var(--white) 100%);
+            min-height: 100vh;
+            font-weight: 400;
+        }
+
+        /* Typographie */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--dark);
+            letter-spacing: -0.01em;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(to right, var(--dark) 0%, var(--gray-dark) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            margin-bottom: 2rem;
+        }
+
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            color: var(--gray-dark);
+            font-size: 1.25rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .subtitle {
+            font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+            color: var(--gray-dark);
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.6;
+        }
+
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: var(--container-max-width);
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+        }
+
+        /* Header avec logo */
+        .booking-header {
+            background-color: var(--white);
+            padding: 1.5rem 0;
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .logo span {
+            background: linear-gradient(to right, var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .logo svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        /* Section principale */
+        .booking-main {
+            padding: 4rem 0 6rem;
+            min-height: calc(100vh - 120px);
+        }
+
+        /* Hero section avec titre */
+        .hero-section {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .hero-section h1 {
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-section .subtitle {
+            margin-bottom: 0;
+        }
+
+        /* Section calendrier - pleine largeur */
+        .calendar-section {
+            background-color: var(--white);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--gray-light);
+            overflow: hidden;
+            margin-bottom: 5rem;
+            position: relative;
+        }
+
+        .calendar-header {
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--secondary-light) 100%);
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .calendar-header h2 {
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .calendar-header p {
+            color: var(--gray-dark);
+            margin-bottom: 0;
+            font-size: 1rem;
+        }
+
+        .iframe-container {
+            padding: 0;
+            background-color: var(--white);
+            min-height: 700px;
+            position: relative;
+        }
+
+        .iframe-container iframe {
+            width: 100% !important;
+            border: none !important;
+            overflow: hidden !important;
+            min-height: 700px;
+            background-color: var(--white);
+        }
+
+        /* Loading state pour l'iframe */
+        .iframe-loading {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--white);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            z-index: 10;
+        }
+
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid var(--gray-light);
+            border-top: 3px solid var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            color: var(--gray-dark);
+            font-weight: 500;
+        }
+
+        /* Section détails */
+        .details-section {
+            margin-bottom: 4rem;
+        }
+
+        .details-content {
+            background-color: var(--white);
+            border-radius: var(--radius-xl);
+            padding: 3rem;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--gray-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .details-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
+        }
+
+        .details-content h2 {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            color: var(--dark);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, var(--light) 0%, var(--primary-light) 100%);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--primary-light);
+            transition: var(--transition);
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary);
+        }
+
+        .benefit-icon {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .benefit-icon svg {
+            color: var(--white);
+            width: 24px;
+            height: 24px;
+        }
+
+        .benefit-content h4 {
+            color: var(--dark);
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .benefit-content p {
+            color: var(--gray-dark);
+            font-size: 1rem;
+            margin-bottom: 0;
+            line-height: 1.5;
+        }
+
+        /* Garantie section */
+        .guarantee-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .guarantee-card {
+            background: linear-gradient(135deg, var(--accent-light) 0%, var(--secondary-light) 100%);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            border: 2px solid var(--accent-light);
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .guarantee-icon {
+            background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+            color: var(--white);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .guarantee-content h3 {
+            color: var(--dark);
+            font-size: 1.125rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .guarantee-content p {
+            color: var(--gray-dark);
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        /* Citation finale */
+        .quote-section {
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .quote-container {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--gray-dark) 100%);
+            color: var(--white);
+            padding: 3rem 2rem;
+            border-radius: var(--radius-xl);
+            position: relative;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .quote-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+            z-index: 1;
+        }
+
+        .quote-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .quote-icon {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        .quote-text {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 600;
+            line-height: 1.3;
+            font-style: italic;
+            margin-bottom: 0;
+            color: var(--white);
+        }
+
+        /* Trust indicators */
+        .trust-indicators {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gray-dark);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .trust-icon {
+            color: var(--success);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .booking-main {
+                padding: 2rem 0 4rem;
+            }
+
+            .hero-section {
+                margin-bottom: 3rem;
+            }
+
+            .details-content {
+                padding: 2rem;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .guarantee-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.5rem;
+            }
+
+            .quote-container {
+                padding: 2rem 1.5rem;
+            }
+
+            .trust-indicators {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .delay-100 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-300 {
+            animation-delay: 0.3s;
+        }
+
+        .delay-400 {
+            animation-delay: 0.4s;
+        }
+
+        /* Masquer initialement pour l'animation */
+        .fade-in-up {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="booking-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="16" r="16" fill="#3BB3E0"/>
+                        <circle cx="16" cy="16" r="8" fill="url(#solarGrad)"/>
+                        <path d="M16 24L20 16H12L16 24Z" fill="white" stroke="#3BB3E0" stroke-width="1"/>
+                        <defs>
+                            <linearGradient id="solarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#FF7D1F"/>
+                                <stop offset="100%" stop-color="#FF5E65"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    Solar<span>Pros</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section principale -->
+    <main class="booking-main">
+        <div class="container">
+            <!-- Hero section avec titre centré -->
+            <section class="hero-section fade-in-up">
+                <h1>Réservez votre démo personnalisée</h1>
+                <p class="subtitle">Découvrez en 30 minutes comment SolarPros peut <strong>tripler vos rendez-vous qualifiés</strong> et transformer votre processus d'acquisition clients.</p>
+            </section>
+
+            <!-- Section calendrier - pleine largeur -->
+            <section class="calendar-section fade-in-up delay-100">
+                <div class="calendar-header">
+                    <h2>Choisissez votre créneau</h2>
+                    <p>Sélectionnez le moment qui vous convient le mieux</p>
+                </div>
+                
+                <div class="iframe-container">
+                    <!-- Loading state -->
+                    <div class="iframe-loading" id="iframeLoading">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">Chargement du calendrier...</div>
+                    </div>
+                    
+                    <!-- Iframe de réservation -->
+                    <iframe 
+                        src="https://api.optyms.com/widget/booking/FERdxTV3bayDWaTT4gt0" 
+                        style="width: 100%;border:none;overflow: hidden;" 
+                        scrolling="no" 
+                        id="FERdxTV3bayDWaTT4gt0_1749230223417"
+                        onload="hideLoading()"
+                        title="Calendrier de réservation Solarpros">
+                    </iframe>
+                </div>
+            </section>
+
+            <!-- Section détails de la démo -->
+            <section class="details-section fade-in-up delay-200">
+                <div class="details-content">
+                    <h2>Voici ce que nous ferons durant ce rendez-vous</h2>
+                    
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Simulation en direct</h4>
+                                <p>Démonstration complète de votre assistant IA personnalisé avec vos données réelles</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 11l3 3l8-8"></path>
+                                    <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9s4.03-9 9-9c1.51 0 2.93.37 4.18 1.03"></path>
+                                </svg>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Analyse gratuite</h4>
+                                <p>Audit complet de votre processus actuel et identification des opportunités</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14,2 14,8 20,8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                    <polyline points="10,9 9,9 8,9"></polyline>
+                                </svg>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Proposition commerciale</h4>
+                                <p>Tarification personnalisée et plan d'implémentation adapté à votre activité</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                                </svg>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Stratégie d'optimisation</h4>
+                                <p>Recommandations concrètes pour maximiser vos conversions dès le démarrage</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guarantee-section">
+                        <div class="guarantee-card">
+                            <div class="guarantee-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+                            <div class="guarantee-content">
+                                <h3>Garantie satisfaction</h3>
+                                <p>Démo 100% gratuite et sans engagement</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trust-indicators">
+                        <div class="trust-item">
+                            <svg class="trust-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12,6 12,12 16,14"></polyline>
+                            </svg>
+                            <span>30 minutes chrono</span>
+                        </div>
+                        <div class="trust-item">
+                            <svg class="trust-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                            <span>Démo en direct</span>
+                        </div>
+                        <div class="trust-item">
+                            <svg class="trust-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                            <span>Sans engagement</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Citation finale -->
+            <section class="quote-section fade-in-up delay-300">
+                <div class="quote-container">
+                    <div class="quote-content">
+                        <svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                        </svg>
+                        <p class="quote-text">Il est temps que votre chiffre d'affaires passe au niveau supérieur</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Script pour l'embed et les animations -->
+    <script src="https://api.optyms.com/js/form_embed.js" type="text/javascript"></script>
+    <script>
+        // Masquer le loading une fois l'iframe chargée
+        function hideLoading() {
+            const loading = document.getElementById('iframeLoading');
+            if (loading) {
+                loading.style.display = 'none';
+            }
+        }
+
+        // Animations au chargement
+        document.addEventListener('DOMContentLoaded', function() {
+            // Trigger animations
+            setTimeout(() => {
+                document.querySelectorAll('.fade-in-up').forEach((element, index) => {
+                    setTimeout(() => {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }, index * 150);
+                });
+            }, 100);
+
+            // Fallback pour masquer le loading après 5 secondes
+            setTimeout(() => {
+                hideLoading();
+            }, 5000);
+
+            // Ajuster la hauteur de l'iframe si nécessaire
+            const iframe = document.getElementById('FERdxTV3bayDWaTT4gt0_1749230223417');
+            if (iframe) {
+                iframe.addEventListener('load', function() {
+                    // Tenter d'ajuster la hauteur automatiquement
+                    try {
+                        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                        const height = Math.max(
+                            iframeDoc.body.scrollHeight,
+                            iframeDoc.body.offsetHeight,
+                            iframeDoc.documentElement.clientHeight,
+                            iframeDoc.documentElement.scrollHeight,
+                            iframeDoc.documentElement.offsetHeight
+                        );
+                        if (height > 700) {
+                            iframe.style.height = height + 'px';
+                        }
+                    } catch (e) {
+                        // Cross-origin, on garde la hauteur par défaut
+                        console.log('Cannot access iframe content due to CORS policy');
+                    }
+                });
+            }
+        });
+
+        // Tracking et analytics (à personnaliser selon vos besoins)
+        function trackBookingPageView() {
+            // Google Analytics, Facebook Pixel, etc.
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'page_view', {
+                    page_title: 'Booking Page',
+                    page_location: window.location.href
+                });
+            }
+        }
+
+        // Smooth scroll pour les liens internes
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Appeler le tracking au chargement
+        trackBookingPageView();
+    </script>
+</body>
+</html>
