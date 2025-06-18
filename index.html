@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Solution IA d'acquisition et de suivi de leads pour installateurs de solutions solaires. Convertissez 3x plus de visiteurs en rendez-vous qualifiés.">
    
+
     <!-- En-têtes de sécurité via meta tags -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; ">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com https://*.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.iubenda.com https://*.cloudflare.com https://*.optyms.com https://*.gohighlevel.com; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://*.iubenda.com https://*.cloudflare.com https://*.google.com https://www.google.com https://*.optyms.com https://*.gohighlevel.com; img-src 'self' data: https: https://*.iubenda.com https://*.cloudflare.com https://*.google.com https://www.google.com https://*.gstatic.com https://*.optyms.com https://*.gohighlevel.com; connect-src 'self' https://*.iubenda.com https://*.cloudflare.com https://*.google.com https://*.optyms.com https://*.gohighlevel.com; base-uri 'self'; object-src 'none'; frame-src https://*.iubenda.com https://*.cloudflare.com https://*.google.com https://www.google.com https://*.optyms.com https://*.gohighlevel.com; frame-ancestors 'none';">
     
     
     <meta http-equiv="X-Frame-Options" content="DENY">
@@ -3222,23 +3223,25 @@
             </div>
             <div class="modal-body">
                 <!-- Placeholder pour le formulaire GoHighLevel -->
-                <div class="contact-form-placeholder" id="ghlFormContainer">
-                    <div class="placeholder-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                        </svg>
-                    </div>
-                    <div class="placeholder-text">
-                        <strong>Formulaire de contact GoHighLevel</strong><br>
-                        Ce placeholder sera remplacé par votre formulaire GoHighLevel intégré.
-                    </div>
-                    <div class="placeholder-note">
-                        <strong>Instructions d'intégration :</strong><br>
-                        1. Créez votre formulaire dans GoHighLevel<br>
-                        2. Copiez le code d'intégration<br>
-                        3. Remplacez le contenu de ce div (id="ghlFormContainer") par votre code
-                    </div>
-                </div>
+<div id="ghlFormContainer" style="height: 450px; width: 100%;">
+    <iframe
+        src="https://api.optyms.com/widget/form/WBJrtqDQjRa4rSOKw9MD"
+        style="width:100%;height:100%;border:none;border-radius:8px"
+        id="inline-WBJrtqDQjRa4rSOKw9MD" 
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="Formulaire de contact Solarepros"
+        data-height="431"
+        data-layout-iframe-id="inline-WBJrtqDQjRa4rSOKw9MD"
+        data-form-id="WBJrtqDQjRa4rSOKw9MD"
+        title="Formulaire de contact Solarepros">
+    </iframe>
+</div>
             </div>
         </div>
     </div>
@@ -4908,7 +4911,7 @@
                 <div class="footer-links-column">
                     <h4 class="footer-links-title">Liens rapides</h4>
                     <ul class="footer-links">
-                        <li><a href="#hero">Accueil</a></li>
+                        <!--li><a href="#hero">Accueil</a></li-->
                         <li><a href="#features">Fonctionnalités</a></li>
                         <li><a href="booking.html">Démo</a></li>
                         <li><a href="#faq">FAQ</a></li>
@@ -4916,20 +4919,20 @@
                 </div>
                 
                 <div class="footer-links-column">
-                    <h4 class="footer-links-title">Légal</h4>
+                    <h4 class="footer-links-title">Mentions légales</h4>
                     <ul class="footer-links">
-                        <li><a href="#">Mentions légales</a></li>
+                        <!--li><a href="#">Mentions légales</a></li-->
                         <li><a href="https://www.iubenda.com/privacy-policy/20317116" class="iubenda-nostyle iubenda-noiframe iubenda-embed iubenda-noiframe " title="Politique de confidentialité ">Politique de confidentialité</a></li>
-                        <li><a href="#">CGU</a></li>
-                        <li><a href="#">RGPD</a></li>
+                        <li><a href="https://www.iubenda.com/conditions-generales/20317116" class="iubenda-nostyle iubenda-embed" title="Conditions Générales ">CGU</a></li>
+                        <li><a href="#"><a href="https://www.iubenda.com/privacy-policy/20317116/cookie-policy" class="iubenda-nostyle iubenda-noiframe iubenda-embed iubenda-noiframe " title="Politique relative aux Cookies ">Gestion des Cookies</a></a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-links-column">
                     <h4 class="footer-links-title">Contact</h4>
                     <ul class="footer-links">
-                        <li><a href="mailto:contact@solarpros.fr">contact@solarpros.fr</a></li>
-                        <li><a href="tel:+33100000000">+33 1 00 00 00 00</a></li>
+                        <li><a href="mailto:contact@solairly.com">contact@solairly.com</a></li>
+                        <li><a href="tel:+33100000000">+33 1 86 47 29 07</a></li>
                         <li class="footer-address">Paris, France</li>
                     </ul>
                 </div>
@@ -4938,7 +4941,7 @@
             <div class="footer-bottom">
                 <p>&copy; 2025 Solarpros. Tous droits réservés.</p>
                 <div class="footer-bottom-links">
-                    <a href="#">Politique de cookies</a>
+                    <!--a href="#">Politique de cookies</a-->
                     <!--a href="#">Plan du site</a-->
                 </div>
             </div>
@@ -5281,6 +5284,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     </script>
+
+    <!-- Script Iubenda pour CGU et Politique de confidentialité -->
 
     <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
 

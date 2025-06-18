@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rendez-vous confirmé ! Votre démo SolarLeadz est programmée. Découvrez comment tripler vos conversions dans quelques jours.">
+    <title>Rendez-vous confirmé ! - SolarLeadz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicons (même que la landing page) -->
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ic29sYXJHcmFkIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0ZGODgwMCIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjRkY2QjZCIiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTYiIGZpbGw9IiM1NUMxRTciLz4KICA8Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSI4IiBmaWxsPSJ1cmwoI3NvbGFyR3JhZCkiIC8+CiAgPHBhdGggZD0iTTE2IDI0TDIwIDE2SDEyTDE2IDI0WiIgZmlsbD0id2hpdGUiIHN0cm9rZT0iIzU1QzFFNyIgc3Ryb2tlLXdpZHRoPSIxIiAvPgo8L3N2Zz4=" type="image/svg+xml">
+    
+    <style>
+        :root {
+            /* Palette de couleurs identique à la landing page */
+            --primary: #3BB3E0;
+            --primary-dark: #2A93BC;
+            --primary-light: #E8F7FC;
+            --primary-transparent: rgba(59, 179, 224, 0.08);
+            --secondary: #FF7D1F;
+            --secondary-dark: #E76800;
+            --secondary-light: #FFF1E8;
+            --secondary-transparent: rgba(255, 125, 31, 0.08);
+            --accent: #FF5E65;
+            --accent-dark: #E63E45;
+            --accent-light: #FFF0F0;
+            --accent-transparent: rgba(255, 94, 101, 0.08);
+            --dark: #233040;
+            --gray-dark: #415164;
+            --gray: #768396;
+            --gray-light: #E5EBEF;
+            --light: #F7FAFC;
+            --white: #FFFFFF;
+            --success: #38C172;
+            --success-light: #E6F9F0;
+            --success-dark: #2F9A5B;
+            
+            /* Ombres */
+            --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.05);
+            --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.07);
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.12);
+            --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.15);
+            --shadow-success: 0 8px 25px rgba(56, 193, 114, 0.25);
+            
+            /* Border radius */
+            --radius-xs: 4px;
+            --radius-sm: 6px;
+            --radius: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --radius-full: 9999px;
+            
+            /* Transitions */
+            --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --transition-bounce: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+            
+            /* Layout */
+            --container-max-width: 1000px;
+            --container-padding: clamp(1rem, 5vw, 2rem);
+        }
+
+        /* Reset et base */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Nunito', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: linear-gradient(135deg, var(--success-light) 0%, var(--white) 100%);
+            min-height: 100vh;
+            font-weight: 400;
+        }
+
+        /* Typographie */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--dark);
+            letter-spacing: -0.01em;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(to right, var(--success) 0%, var(--success-dark) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            margin-bottom: 2rem;
+        }
+
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            color: var(--gray-dark);
+            font-size: 1.25rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .subtitle {
+            font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+            color: var(--gray-dark);
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.6;
+        }
+
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: var(--container-max-width);
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+        }
+
+        /* Header avec logo */
+        .booking-header {
+            background-color: var(--white);
+            padding: 1.5rem 0;
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .logo span {
+            background: linear-gradient(to right, var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .logo svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        /* Section principale */
+        .confirmation-main {
+            padding: 4rem 0 6rem;
+            min-height: calc(100vh - 120px);
+        }
+
+        /* Hero section avec confirmation */
+        .hero-section {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .confirmation-icon {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--success), var(--success-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            box-shadow: var(--shadow-success);
+            animation: successPulse 2s ease-in-out infinite;
+            position: relative;
+        }
+
+        .confirmation-icon::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: var(--success);
+            opacity: 0.3;
+            animation: ripple 2s ease-out infinite;
+        }
+
+        .confirmation-icon svg {
+            color: var(--white);
+            width: 60px;
+            height: 60px;
+            position: relative;
+            z-index: 2;
+        }
+
+        @keyframes successPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes ripple {
+            0% { transform: scale(1); opacity: 0.3; }
+            100% { transform: scale(1.4); opacity: 0; }
+        }
+
+        .hero-section h1 {
+            margin-bottom: 1rem;
+        }
+
+        .hero-section .subtitle {
+            margin-bottom: 3rem;
+        }
+
+        /* Section informations du RDV */
+        .appointment-info {
+            background-color: var(--white);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--success-light);
+            overflow: hidden;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .appointment-info::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, var(--success) 0%, var(--primary) 50%, var(--secondary) 100%);
+        }
+
+        .appointment-header {
+            background: linear-gradient(135deg, var(--success-light) 0%, var(--primary-light) 100%);
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--success-light);
+        }
+
+        .appointment-header h2 {
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .appointment-details {
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .appointment-details {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .detail-item {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: var(--light);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-light);
+        }
+
+        .detail-icon {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .detail-icon svg {
+            color: var(--white);
+            width: 24px;
+            height: 24px;
+        }
+
+        .detail-item h4 {
+            color: var(--dark);
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .detail-item p {
+            color: var(--gray-dark);
+            font-size: 1rem;
+            margin-bottom: 0;
+            font-weight: 600;
+        }
+
+        /* Boutons calendrier */
+        .calendar-section {
+            background-color: var(--white);
+            border-radius: var(--radius-xl);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--gray-light);
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .calendar-section h3 {
+            margin-bottom: 1rem;
+        }
+
+        .calendar-section p {
+            margin-bottom: 2rem;
+            font-size: 1.125rem;
+        }
+
+        .calendar-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .calendar-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 1.5rem;
+            border-radius: var(--radius-lg);
+            border: 2px solid var(--gray-light);
+            background-color: var(--white);
+            color: var(--gray-dark);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition-bounce);
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .calendar-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .calendar-btn.google:hover {
+            border-color: #4285F4;
+            color: #4285F4;
+            background-color: rgba(66, 133, 244, 0.05);
+        }
+
+        .calendar-btn.outlook:hover {
+            border-color: #0078D4;
+            color: #0078D4;
+            background-color: rgba(0, 120, 212, 0.05);
+        }
+
+        .calendar-btn.apple:hover {
+            border-color: #007AFF;
+            color: #007AFF;
+            background-color: rgba(0, 122, 255, 0.05);
+        }
+
+        .calendar-btn.yahoo:hover {
+            border-color: #6001D2;
+            color: #6001D2;
+            background-color: rgba(96, 1, 210, 0.05);
+        }
+
+        .calendar-note {
+            font-size: 0.95rem;
+            color: var(--gray);
+            font-style: italic;
+        }
+
+        /* Section détails de la démo */
+        .demo-details {
+            background-color: var(--white);
+            border-radius: var(--radius-xl);
+            padding: 3rem;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--gray-light);
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .demo-details::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
+        }
+
+        .demo-details h2 {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            color: var(--dark);
+        }
+
+        .demo-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .demo-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .demo-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, var(--light) 0%, var(--primary-light) 100%);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--primary-light);
+            transition: var(--transition);
+        }
+
+        .demo-item:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary);
+        }
+
+        .demo-icon {
+            background: linear-gradient(135deg, var(--secondary), var(--secondary-dark));
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .demo-icon svg {
+            color: var(--white);
+            width: 24px;
+            height: 24px;
+        }
+
+        .demo-content h4 {
+            color: var(--dark);
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .demo-content p {
+            color: var(--gray-dark);
+            font-size: 1rem;
+            margin-bottom: 0;
+            line-height: 1.5;
+        }
+
+        /* Section prochaines étapes */
+        .next-steps {
+            background-color: var(--white);
+            border-radius: var(--radius-xl);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--accent-light);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .next-steps::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, var(--accent) 0%, var(--secondary) 100%);
+            border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+        }
+
+        .next-steps h3 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--dark);
+        }
+
+        .steps-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .steps-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background-color: var(--light);
+            border-radius: var(--radius);
+            border-left: 4px solid var(--accent);
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+            color: var(--white);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .steps-list span {
+            color: var(--gray-dark);
+            font-weight: 500;
+            line-height: 1.6;
+            font-size: 1.0625rem;
+        }
+
+        /* Section contact */
+        .contact-section {
+            background-color: var(--white);
+            border-radius: var(--radius-xl);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--gray-light);
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .contact-section h3 {
+            margin-bottom: 1rem;
+        }
+
+        .contact-section p {
+            margin-bottom: 2rem;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.875rem 1.5rem;
+            border-radius: var(--radius-full);
+            border: 2px solid var(--primary);
+            background-color: var(--white);
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition-bounce);
+        }
+
+        .contact-btn:hover {
+            background-color: var(--primary);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .contact-btn.secondary {
+            border-color: var(--secondary);
+            color: var(--secondary);
+        }
+
+        .contact-btn.secondary:hover {
+            background-color: var(--secondary);
+            color: var(--white);
+        }
+
+        /* Citation finale */
+        .quote-section {
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .quote-container {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--gray-dark) 100%);
+            color: var(--white);
+            padding: 3rem 2rem;
+            border-radius: var(--radius-xl);
+            position: relative;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .quote-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+            z-index: 1;
+        }
+
+        .quote-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .quote-icon {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        .quote-text {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 600;
+            line-height: 1.3;
+            font-style: italic;
+            margin-bottom: 0;
+            color: var(--white);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .confirmation-main {
+                padding: 2rem 0 4rem;
+            }
+
+            .hero-section {
+                margin-bottom: 3rem;
+            }
+
+            .appointment-details {
+                grid-template-columns: 1fr;
+            }
+
+            .demo-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .calendar-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .calendar-btn {
+                min-width: 200px;
+                justify-content: center;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-btn {
+                min-width: 200px;
+                justify-content: center;
+            }
+
+            .demo-details,
+            .next-steps,
+            .calendar-section,
+            .contact-section {
+                padding: 2rem;
+            }
+
+            .quote-container {
+                padding: 2rem 1.5rem;
+            }
+
+            .confirmation-icon {
+                width: 100px;
+                height: 100px;
+            }
+
+            .confirmation-icon svg {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .delay-100 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-300 {
+            animation-delay: 0.3s;
+        }
+
+        .delay-400 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-500 {
+            animation-delay: 0.5s;
+        }
+
+        /* Masquer initialement pour l'animation */
+        .fade-in-up {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="booking-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="16" r="16" fill="#3BB3E0"/>
+                        <circle cx="16" cy="16" r="8" fill="url(#solarGrad)"/>
+                        <path d="M16 24L20 16H12L16 24Z" fill="white" stroke="#3BB3E0" stroke-width="1"/>
+                        <defs>
+                            <linearGradient id="solarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#FF7D1F"/>
+                                <stop offset="100%" stop-color="#FF5E65"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    Solar<span>Leadz</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section principale -->
+    <main class="confirmation-main">
+        <div class="container">
+            <!-- Hero section avec confirmation -->
+            <section class="hero-section fade-in-up">
+                <div class="confirmation-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <h1>Rendez-vous confirmé !</h1>
+                <p class="subtitle">Parfait ! Votre démo personnalisée SolarLeadz est programmée. <strong>Préparez-vous à découvrir comment tripler vos conversions</strong> et transformer votre business solaire.</p>
+            </section>
+
+            <!-- Informations du rendez-vous -->
+            <section class="appointment-info fade-in-up delay-100">
+                <div class="appointment-header">
+                    <h2>Détails de votre rendez-vous</h2>
+                </div>
+                <div class="appointment-details">
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12,6 12,12 16,14"></polyline>
+                            </svg>
+                        </div>
+                        <h4>Durée</h4>
+                        <p>30 minutes chrono</p>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <h4>Format</h4>
+                        <p>Visioconférence</p>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                        </div>
+                        <h4>Type</h4>
+                        <p>Démo personnalisée</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Boutons calendrier -->
+            <section class="calendar-section fade-in-up delay-200">
+                <h3>Ajoutez le rendez-vous à votre calendrier</h3>
+                <p>Ne manquez pas votre démo ! Ajoutez cet événement à votre calendrier préféré.</p>
+                
+                <div class="calendar-buttons">
+                    <a href="#" class="calendar-btn google" onclick="addToGoogleCalendar()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                        </svg>
+                        Google Calendar
+                    </a>
+                    
+                    <a href="#" class="calendar-btn outlook" onclick="addToOutlookCalendar()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M7 9c0-4 2.85-4 4.5-4s4.5 0 4.5 4v6c0 4-2.85 4-4.5 4S7 19 7 15V9z"/>
+                            <path d="M12 9v6"/>
+                            <path d="M16 9v6"/>
+                            <path d="M8 9v6"/>
+                        </svg>
+                        Outlook
+                    </a>
+                    
+                    <a href="#" class="calendar-btn apple" onclick="addToAppleCalendar()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M15.7 13.3c-.1-3.3 2.7-4.9 2.8-5-.8-1.2-2.1-1.4-2.6-1.4-.5-.1-1.7-.2-3.3.8-1.1.7-1.7.7-2.6 0-1.3-.9-2.4-.7-3 0-2.1 1.2-2.7 4.2-.7 6.7.5.7 1.1 1.4 1.9 1.4.8 0 1.1-.5 2.1-.5s1.3.5 2.1.5c.8 0 1.3-.7 1.8-1.4.6-.8.8-1.6.8-1.6s-1.6-.6-1.6-2.5zM12.2 7.5c.7-.8 1.2-2 1.1-3.2-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1.1 3 1.2.1 2.3-.6 2.9-1.3z"/>
+                        </svg>
+                        Apple Calendar
+                    </a>
+                    
+                    <a href="#" class="calendar-btn yahoo" onclick="addToYahooCalendar()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M2 12c0 5.5 4.5 10 10 10s10-4.5 10-10S17.5 2 12 2 2 6.5 2 12zm8.5-5v3.5L8 8l2.5 2.5v3L8 11l2.5-2.5zm5 0v10l-2.5-2.5V11l-2.5 2.5v-3L13 8l-2.5-2.5V7.5z"/>
+                        </svg>
+                        Yahoo Calendar
+                    </a>
+                </div>
+                
+                <p class="calendar-note">Le lien de connexion vous sera envoyé par email 24h avant le rendez-vous</p>
+            </section>
+
+            <!-- Ce qui vous attend -->
+            <section class="demo-details fade-in-up delay-300">
+                <h2>Voici ce qui vous attend durant ce rendez-vous</h2>
+                
+                <div class="demo-grid">
+                    <div class="demo-item">
+                        <div class="demo-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                        </div>
+                        <div class="demo-content">
+                            <h4>Simulation en direct</h4>
+                            <p>Démonstration complète de votre assistant IA personnalisé avec vos données réelles</p>
+                        </div>
+                    </div>
+
+                    <div class="demo-item">
+                        <div class="demo-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 11l3 3l8-8"></path>
+                                <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9s4.03-9 9-9c1.51 0 2.93.37 4.18 1.03"></path>
+                            </svg>
+                        </div>
+                        <div class="demo-content">
+                            <h4>Analyse gratuite</h4>
+                            <p>Audit complet de votre processus actuel et identification des opportunités d'amélioration</p>
+                        </div>
+                    </div>
+
+                    <div class="demo-item">
+                        <div class="demo-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14,2 14,8 20,8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10,9 9,9 8,9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="demo-content">
+                            <h4>Proposition commerciale</h4>
+                            <p>Tarification personnalisée et plan d'implémentation adapté à votre activité et vos objectifs</p>
+                        </div>
+                    </div>
+
+                    <div class="demo-item">
+                        <div class="demo-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                            </svg>
+                        </div>
+                        <div class="demo-content">
+                            <h4>Stratégie d'optimisation</h4>
+                            <p>Recommandations concrètes pour maximiser vos conversions dès le premier jour</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Prochaines étapes -->
+            <section class="next-steps fade-in-up delay-400">
+                <h3>Prochaines étapes avant votre rendez-vous</h3>
+                
+                <ul class="steps-list">
+                    <li>
+                        <div class="step-number">1</div>
+                        <span><strong>Confirmez votre présence</strong> - Vous recevrez un email de confirmation avec le lien de connexion</span>
+                    </li>
+                    <li>
+                        <div class="step-number">2</div>
+                        <span><strong>Préparez vos questions</strong> - Notez vos défis actuels et vos objectifs pour maximiser notre échange</span>
+                    </li>
+                    <li>
+                        <div class="step-number">3</div>
+                        <span><strong>Rassemblez vos données</strong> - Volume de leads, taux de conversion, budget marketing (optionnel)</span>
+                    </li>
+                    <li>
+                        <div class="step-number">4</div>
+                        <span><strong>Recevez des rappels</strong> - Nous vous enverrons des rappels par email et SMS 24h et 1h avant</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Contact section -->
+            <section class="contact-section fade-in-up delay-500">
+                <h3>Une question avant notre rendez-vous ?</h3>
+                <p>Notre équipe est disponible pour répondre à toutes vos questions</p>
+                
+                <div class="contact-buttons">
+                    <a href="mailto:contact@solarleadz.fr" class="contact-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        Nous contacter par email
+                    </a>
+                    
+                    <a href="tel:+33100000000" class="contact-btn secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        Nous appeler
+                    </a>
+                </div>
+            </section>
+
+            <!-- Citation finale -->
+            <section class="quote-section fade-in-up delay-500">
+                <div class="quote-container">
+                    <div class="quote-content">
+                        <svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                        </svg>
+                        <p class="quote-text">Il est temps que votre chiffre d'affaires passe au niveau supérieur</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script>
+        // Animations au chargement
+        document.addEventListener('DOMContentLoaded', function() {
+            // Trigger animations
+            setTimeout(() => {
+                document.querySelectorAll('.fade-in-up').forEach((element, index) => {
+                    setTimeout(() => {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }, index * 150);
+                });
+            }, 100);
+        });
+
+        // Fonctions pour ajouter au calendrier (à personnaliser avec les vraies données)
+        function addToGoogleCalendar() {
+            const eventDetails = {
+                title: "Démo SolarLeadz - Assistant IA pour installateurs solaires",
+                description: "Découvrez comment tripler vos rendez-vous qualifiés avec notre assistant IA personnalisé.",
+                location: "Visioconférence (lien envoyé par email)",
+                startDate: new Date(), // À remplacer par la vraie date
+                endDate: new Date(Date.now() + 30 * 60 * 1000) // 30 minutes plus tard
+            };
+            
+            const googleUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventDetails.title)}&dates=${formatDateForGoogle(eventDetails.startDate)}/${formatDateForGoogle(eventDetails.endDate)}&details=${encodeURIComponent(eventDetails.description)}&location=${encodeURIComponent(eventDetails.location)}`;
+            
+            window.open(googleUrl, '_blank');
+        }
+
+        function addToOutlookCalendar() {
+            const eventDetails = {
+                title: "Démo SolarLeadz - Assistant IA",
+                description: "Découvrez comment tripler vos rendez-vous qualifiés avec notre assistant IA personnalisé.",
+                location: "Visioconférence",
+                startDate: new Date(), // À remplacer par la vraie date
+                endDate: new Date(Date.now() + 30 * 60 * 1000)
+            };
+            
+            const outlookUrl = `https://outlook.live.com/calendar/0/deeplink/compose?subject=${encodeURIComponent(eventDetails.title)}&startdt=${eventDetails.startDate.toISOString()}&enddt=${eventDetails.endDate.toISOString()}&body=${encodeURIComponent(eventDetails.description)}&location=${encodeURIComponent(eventDetails.location)}`;
+            
+            window.open(outlookUrl, '_blank');
+        }
+
+        function addToAppleCalendar() {
+            // Génère un fichier .ics pour Apple Calendar
+            const eventDetails = {
+                title: "Démo SolarLeadz - Assistant IA",
+                description: "Découvrez comment tripler vos rendez-vous qualifiés avec notre assistant IA personnalisé.",
+                location: "Visioconférence",
+                startDate: new Date(), // À remplacer par la vraie date
+                endDate: new Date(Date.now() + 30 * 60 * 1000)
+            };
+            
+            const icsContent = generateICS(eventDetails);
+            downloadICS(icsContent, 'demo-solarleadz.ics');
+        }
+
+        function addToYahooCalendar() {
+            const eventDetails = {
+                title: "Démo SolarLeadz - Assistant IA",
+                description: "Découvrez comment tripler vos rendez-vous qualifiés avec notre assistant IA personnalisé.",
+                location: "Visioconférence",
+                startDate: new Date(), // À remplacer par la vraie date
+                endDate: new Date(Date.now() + 30 * 60 * 1000)
+            };
+            
+            const yahooUrl = `https://calendar.yahoo.com/?v=60&TITLE=${encodeURIComponent(eventDetails.title)}&ST=${formatDateForYahoo(eventDetails.startDate)}&DUR=0030&DESC=${encodeURIComponent(eventDetails.description)}&in_loc=${encodeURIComponent(eventDetails.location)}`;
+            
+            window.open(yahooUrl, '_blank');
+        }
+
+        // Fonctions utilitaires pour les calendriers
+        function formatDateForGoogle(date) {
+            return date.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+        }
+
+        function formatDateForYahoo(date) {
+            return date.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+        }
+
+        function generateICS(eventDetails) {
+            const startDate = eventDetails.startDate.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+            const endDate = eventDetails.endDate.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+            
+            return `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//SolarLeadz//FR
+BEGIN:VEVENT
+UID:${Date.now()}@solarleadz.fr
+DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z'}
+DTSTART:${startDate}
+DTEND:${endDate}
+SUMMARY:${eventDetails.title}
+DESCRIPTION:${eventDetails.description}
+LOCATION:${eventDetails.location}
+END:VEVENT
+END:VCALENDAR`;
+        }
+
+        function downloadICS(content, filename) {
+            const blob = new Blob([content], { type: 'text/calendar;charset=utf-8' });
+            const link = document.createElement('a');
+            link.href = window.URL.createObjectURL(blob);
+            link.download = filename;
+            link.click();
+        }
+
+        // Tracking et analytics
+        function trackConfirmationView() {
+            // Google Analytics, Facebook Pixel, etc.
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'appointment_confirmed', {
+                    event_category: 'booking',
+                    event_label: 'demo_confirmation',
+                    value: 1
+                });
+            }
+        }
+
+        // Appeler le tracking au chargement
+        trackConfirmationView();
+
+        // Partage sur les réseaux sociaux (bonus)
+        function shareOnLinkedIn() {
+            const text = "Je viens de réserver ma démo personnalisée SolarLeadz pour découvrir comment tripler mes conversions dans le solaire ! 🚀";
+            const url = window.location.href;
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}&summary=${encodeURIComponent(text)}`, '_blank');
+        }
+    </script>
+</body>
+</html>
