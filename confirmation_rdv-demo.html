@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Rendez-vous confirmé ! Votre démo SolarLeadz est programmée. Découvrez comment tripler vos conversions dans quelques jours.">
-    <title>Rendez-vous confirmé ! - SolarLeadz</title>
+    <meta name="description" content="Rendez-vous confirmé ! Votre démo SolarePros est programmée. Découvrez comment tripler vos conversions dans quelques jours.">
+    <title>Rendez-vous confirmé ! - SolarePros</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Favicons (même que la landing page) -->
@@ -787,7 +787,7 @@
                             </linearGradient>
                         </defs>
                     </svg>
-                    Solar<span>Leadz</span>
+                    Solare<span>Pros</span>
                 </a>
             </div>
         </div>
@@ -805,7 +805,7 @@
                     </svg>
                 </div>
                 <h1>Rendez-vous confirmé !</h1>
-                <p class="subtitle">Parfait ! Votre démo personnalisée SolarLeadz est programmée. <strong>Préparez-vous à découvrir comment tripler vos conversions</strong> et transformer votre business solaire.</p>
+                <p class="subtitle">Parfait ! Votre démo personnalisée SolarePros est programmée. <strong>Préparez-vous à découvrir comment tripler vos conversions</strong> et transformer votre business solaire.</p>
             </section>
 
             <!-- Informations du rendez-vous -->
@@ -983,7 +983,7 @@
                 <p>Notre équipe est disponible pour répondre à toutes vos questions</p>
                 
                 <div class="contact-buttons">
-                    <a href="mailto:contact@solarleadz.fr" class="contact-btn">
+                    <a href="mailto:contact@SolarePros.fr" class="contact-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                             <polyline points="22,6 12,13 2,6"></polyline>
@@ -1032,7 +1032,7 @@
         // Fonctions pour ajouter au calendrier (à personnaliser avec les vraies données)
         function addToGoogleCalendar() {
             const eventDetails = {
-                title: "Démo SolarLeadz - Assistant IA pour installateurs solaires",
+                title: "Démo SolarePros - Assistant IA pour installateurs solaires",
                 description: "Découvrez comment tripler vos rendez-vous qualifiés avec notre assistant IA personnalisé.",
                 location: "Visioconférence (lien envoyé par email)",
                 startDate: new Date(), // À remplacer par la vraie date
@@ -1046,7 +1046,7 @@
 
         function addToOutlookCalendar() {
             const eventDetails = {
-                title: "Démo SolarLeadz - Assistant IA",
+                title: "Démo SolarePros - Assistant IA",
                 description: "Découvrez comment tripler vos rendez-vous qualifiés avec notre assistant IA personnalisé.",
                 location: "Visioconférence",
                 startDate: new Date(), // À remplacer par la vraie date
@@ -1061,7 +1061,7 @@
         function addToAppleCalendar() {
             // Génère un fichier .ics pour Apple Calendar
             const eventDetails = {
-                title: "Démo SolarLeadz - Assistant IA",
+                title: "Démo SolarePros - Assistant IA",
                 description: "Découvrez comment tripler vos rendez-vous qualifiés avec notre assistant IA personnalisé.",
                 location: "Visioconférence",
                 startDate: new Date(), // À remplacer par la vraie date
@@ -1069,12 +1069,12 @@
             };
             
             const icsContent = generateICS(eventDetails);
-            downloadICS(icsContent, 'demo-solarleadz.ics');
+            downloadICS(icsContent, 'demo-SolarePros.ics');
         }
 
         function addToYahooCalendar() {
             const eventDetails = {
-                title: "Démo SolarLeadz - Assistant IA",
+                title: "Démo SolarePros - Assistant IA",
                 description: "Découvrez comment tripler vos rendez-vous qualifiés avec notre assistant IA personnalisé.",
                 location: "Visioconférence",
                 startDate: new Date(), // À remplacer par la vraie date
@@ -1101,9 +1101,9 @@
             
             return `BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//SolarLeadz//FR
+PRODID:-//SolarePros//FR
 BEGIN:VEVENT
-UID:${Date.now()}@solarleadz.fr
+UID:${Date.now()}@SolarePros.fr
 DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z'}
 DTSTART:${startDate}
 DTEND:${endDate}
@@ -1139,7 +1139,7 @@ END:VCALENDAR`;
 
         // Partage sur les réseaux sociaux (bonus)
         function shareOnLinkedIn() {
-            const text = "Je viens de réserver ma démo personnalisée SolarLeadz pour découvrir comment tripler mes conversions dans le solaire ! 🚀";
+            const text = "Je viens de réserver ma démo personnalisée SolarePros pour découvrir comment tripler mes conversions dans le solaire ! 🚀";
             const url = window.location.href;
             window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}&summary=${encodeURIComponent(text)}`, '_blank');
         }
